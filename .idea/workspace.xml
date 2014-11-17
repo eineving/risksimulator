@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8432277c-e46e-4562-9e1f-7384c9cedd82" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/RiskSimulator.java" />
-      <change type="DELETED" beforePath="C:\Users\Daniel\code\risksimulator\src\com\company\Main.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/InputPanel.java" afterPath="$PROJECT_DIR$/src/com/company/InputPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="risksimulator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -444,12 +441,12 @@
       <updated>1416166765277</updated>
       <workItem from="1416166766955" duration="505000" />
       <workItem from="1416176889005" duration="1576000" />
-      <workItem from="1416242160957" duration="6587000" />
+      <workItem from="1416242160957" duration="7092000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8668000" />
+    <option name="totallyTimeSpent" value="9173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />

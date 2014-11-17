@@ -14,16 +14,52 @@ public class Combat {
     }
 
     public void rollOnce() {
+        ArrayList<Die> attackDice = new ArrayList<Die>();
+        ArrayList<Die> defendDice = new ArrayList<Die>();
 
+        System.out.print("Attackers roll:");
+        for (int i = 0; i < nbrOfAttackers && i < 3; i++) {
+            Die temp = new Die(6);
+            System.out.print(" " + temp.rollDie());
+            attackDice.add(temp);
+        }
+        System.out.println();
+        System.out.print("Defenders roll:");
+        for (int i = 0; i < nbrOfDefenders && i < 2; i++) {
+            Die temp = new Die(6);
+            System.out.print(" " + temp.rollDie());
+            defendDice.add(temp);
+        }
+        executeResult(attackDice, defendDice);
+
+        System.out.println();
+        System.out.println("Attackers left: " + nbrOfAttackers);
+        System.out.println("Defenders left: " + nbrOfDefenders);
     }
 
     public void simulateOutcome() {
+        while (!battleFinished()) {
+            System.out.println("======New round======");
+            rollOnce();
+
+        }
+        try {
+            System.out.println("Attackers win: " + attackersWin());
+        } catch (Exception ignore) {
+
+        }
 
     }
 
-    public boolean attackersWin() {
-        //TODO fix
-        return false;
+    public boolean battleFinished() {
+        return (nbrOfAttackers < 1 || nbrOfDefenders < 1);
+    }
+
+    public boolean attackersWin() throws Exception {
+        if (!battleFinished()) {
+            throw new Exception("Battle not finished");
+        }
+        return nbrOfDefenders < 1;
     }
 
     private void executeResult(ArrayList<Die> attackers, ArrayList<Die> defenders) {

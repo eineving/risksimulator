@@ -126,6 +126,13 @@ public class Combat {
                 nbrOfAttackers--;
             }
         }
+    }
 
+    public int getNbrOfAttackers() {
+        return nbrOfAttackers;
+    }
+
+    public int getNbrOfDefenders() {
+        return nbrOfDefenders;
     }
 }

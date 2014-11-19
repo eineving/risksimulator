@@ -1,6 +1,7 @@
 package com.company;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseListener;
@@ -14,14 +15,23 @@ public class InputPanel extends JPanel{
     private JSpinner deffenderInput = new JSpinner();
     private JSpinner attackerInput = new JSpinner();
     private JButton simulateButton = new JButton("Simulate Outcome");
+    private GridLayout layout = new GridLayout(2,1);
+    private GridLayout upperLayout = new GridLayout(2,2);
+    private JPanel upperPart = new JPanel();
 
     public InputPanel(ActionListener listener){
         super();
+
+        upperPart.setLayout(upperLayout);
+        upperPart.setVisible(true);
+        upperPart.add(nbrOfAttackers);
+        upperPart.add(attackerInput);
+        upperPart.add(nbrOfDeffender);
+        upperPart.add(deffenderInput);
+
+        setLayout(layout);
         setVisible(true);
-        add(nbrOfAttackers);
-        add(attackerInput);
-        add(nbrOfDeffender);
-        add(deffenderInput);
+        add(upperPart);
         add(simulateButton);
 
         simulateButton.addActionListener(listener);
